@@ -1,0 +1,38 @@
+namespace Ejercicio1
+{
+    class Persona
+    {
+        
+            public string Nombre
+            { get; set; }
+
+            public string Apellido
+            { get; set; }
+
+            public int Edad
+            { get; set; }
+
+            public override string ToString()
+            {
+                return Nombre + " " + Apellido + "-" + Edad;
+            }
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("Creando 1000 personas");
+
+            for (int i = 0; i < 1000; i++)
+            {
+                Persona persona = new Persona();
+                persona.Apellido = "Fernandez";
+                persona.Nombre = "Juan";
+                persona.Edad = i;
+
+                Console.WriteLine(persona.Edad);
+
+            }
+        }
+    }
+     
+    
+        
+    }
